@@ -25,10 +25,10 @@ public class Payment {
 }
 ```
 There are a few obvious issues;
-1. that there's no need to raise an expesnive exception if call to gateway isn't success == true
+1. that there's no need to raise an expensive exception if call to gateway isn't success == true
 2. separation of concerns - the gateway client code and database access code are mixed in the same class
 3. we can't unit test, so some dependency injection is required
 
 The tougher issue is the question of what we should do if the database call fails?
 
-Here's the answer.
+Here's the [answer](src/Payment.java)
